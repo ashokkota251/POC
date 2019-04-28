@@ -1,0 +1,65 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    margin: 10% 30%;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+.poc-login-company-name {
+    text-align: center;
+    padding: 10%;
+    color: #ff8400;
+    font-size: 3em;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.poc-nav-company-name {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-family: 'Ubuntu', sans-serif;
+    margin: auto;
+    padding: 6px;
+}
+
+.poc-nav-bg-blue {
+    background: #3f51b5;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+.nav-link {
+    color: white !important
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+}
+
+.poc-navbar-notifcation-li {
+    margin: auto;
+}
+
+.poc-navbar-notifcation-i {
+    color: white;
+    font-size: 16px;
+    margin: auto;
+    padding-top: 5px;
+}
+
+.poc-navbar-badge {
+    position: relative !important;
+    top: -10px !important;
+    color: white !important;
+    left: -2px !important;
+    border: 1px solid !important;
+    border-radius: 50% !important;
+    background: white !important;
+    color: black !important;
+}

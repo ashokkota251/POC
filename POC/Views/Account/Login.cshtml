@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/login.css" rel="stylesheet" />
+   
+</head>
+<body>
+    <div class="login-screen">
+        <div class="left-item">
+            <div class="login-panel">
+                <div class="inner-login-panel">
+                    <div class="content-panel">
+                        <h3 class="title">Sign In</h3>
+                        <form asp-action="login" method="post">
+                            <input type="text" id="userName" name="userName" placeholder="Enter user name" autocomplete="off" required/>
+                            <input type="password" name="password" id="password" placeholder="Password" autocomplete="off" required/>
+                            <button type="submit" value="Let's Go">Let's Go</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-item">
+            <div class="slider-panel">
+                <div class="inner-slider-panel">
+                    <h1>Logo</h1>
+                    <p>Sign in to acess your account.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

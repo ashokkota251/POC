@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+
+
+
+<div class="row">
+    <div class="col-3">
+        <div id="treeView" class="demo" style="border-right:1px solid #ccc">
+            <ul>
+                <li data-jstree='{ "opened" : true }'>
+                    Top - 1
+                    <ul>
+                        <li>Child 1-1</li>
+                        <li>Child 1-2</li>
+                    </ul>
+                </li>
+
+                <li>
+                    Top - 2
+                    <ul>
+                        <li>Child 2-1</li>
+                        <li>Child 2-2</li>
+                        <li>Child 2-3</li>
+                        <li>Child 2-4</li>
+                    </ul>
+                </li>
+
+                <li>
+                    Top - 3
+                    <ul>
+                        <li>Child 3-1</li>
+                        <li>Child 3-2</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-9" id="treeViewDataContent">
+        <h5 id="txtHeader"></h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+
+
+@section scripts {
+<script>
+    $(document).ready(function () {
+        $('#treeView').jstree();
+        $('.nav-item').removeClass('active');
+        $('#navHome').addClass('active');
+        $('#treeViewDataContent').hide();
+    });
+
+    $('#treeView').on("changed.jstree", function (e, data) {
+        if (data.node !== undefined && data.node.parent !== '#') {
+            $('#txtHeader').html(data.node.text);
+            $('#treeViewDataContent').show();
+        }
+        else {
+            $('#treeViewDataContent').hide();
+        }
+    });
+</script>
+}
